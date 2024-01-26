@@ -2,12 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const { parse } = require('@typescript-eslint/parser');
 
-const pkgImportPath = process.env['PKG_IMPORT_PATH'] ?? 'startgpt/'
+const pkgImportPath = process.env['PKG_IMPORT_PATH'] ?? 'startgpt/';
 
 const distDir =
-  process.env['DIST_PATH'] ?
-    path.resolve(process.env['DIST_PATH'])
-  : path.resolve(__dirname, '..', 'dist');
+  process.env['DIST_PATH'] ? path.resolve(process.env['DIST_PATH']) : path.resolve(__dirname, '..', 'dist');
 const distSrcDir = path.join(distDir, 'src');
 
 /**

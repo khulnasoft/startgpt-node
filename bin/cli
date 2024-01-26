@@ -7,7 +7,7 @@ const commands = {
     description: 'Run migrations to update from startgpt v3 to v4',
     fn: () => {
       console.log('This automatic code migration is provided by grit.io');
-      console.log('Visit https://app.grit.io/studio?preset=startgpt_v4 for more details.')
+      console.log('Visit https://app.grit.io/studio?preset=startgpt_v4 for more details.');
 
       const result = spawnSync(
         'npx',
@@ -17,12 +17,12 @@ const commands = {
       if (result.status !== 0) {
         process.exit(result.status);
       }
-    }
-  }
-}
+    },
+  },
+};
 
 function exitWithHelp() {
-  console.log("Usage: $0 <subcommand>");
+  console.log('Usage: $0 <subcommand>');
   console.log();
   console.log('Subcommands:');
 
